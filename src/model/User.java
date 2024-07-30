@@ -9,12 +9,21 @@ public class User {
     private String senhaHash;
 
     public User(String nome, String telefone, String email, String cpf, String senhaHash) {
+        if (nome == null || nome.isEmpty()) {
+            throw new IllegalArgumentException("Nome é obrigatório.");
+        }
+        if (cpf == null || cpf.isEmpty()) {
+            throw new IllegalArgumentException("CPF é obrigatório.");
+        }
+
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.cpf = cpf;
         this.senhaHash = senhaHash;
     }
+
+    // Getters e setters...
 
     public int getId() {
         return id;
@@ -29,6 +38,9 @@ public class User {
     }
 
     public void setNome(String nome) {
+        if (nome == null || nome.isEmpty()) {
+            throw new IllegalArgumentException("Nome é obrigatório.");
+        }
         this.nome = nome;
     }
 
@@ -53,6 +65,9 @@ public class User {
     }
 
     public void setCpf(String cpf) {
+        if (cpf == null || cpf.isEmpty()) {
+            throw new IllegalArgumentException("CPF é obrigatório.");
+        }
         this.cpf = cpf;
     }
 
@@ -64,4 +79,3 @@ public class User {
         this.senhaHash = senhaHash;
     }
 }
-
