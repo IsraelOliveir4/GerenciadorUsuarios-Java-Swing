@@ -1,4 +1,4 @@
-# Dev Teste JAVA - Germantech Sistemas
+# GerenciadorUsuarios-Java-Swing
 * Linguagem: JAVA
 * IDE Utilizada: IntelliJ
 * Conexão com o banco de dados: JDBC Connection
